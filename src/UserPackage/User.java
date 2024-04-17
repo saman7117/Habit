@@ -5,7 +5,7 @@
 
 package UserPackage;
 
-import TaskPackage.Task;
+import Activity.Task;
 import java.util.Vector;
 
 import static UtilPackage.Util.*;

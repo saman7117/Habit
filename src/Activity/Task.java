@@ -2,9 +2,9 @@
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by FernFlower decompiler)
 //
-package TaskPackage;
+package Activity;
 import UserPackage.User;
-public class Task {
+public class Task extends ToDo{
     public String name;
     public final String color ;
     User user ;
@@ -16,7 +16,7 @@ public class Task {
         return v;
     }
 
-    public boolean isValidColor(String testColor){
+    public static boolean isValidColor(String testColor){
         if (testColor.length()!=6)
             return false;
         else{
@@ -74,5 +74,10 @@ public class Task {
         return name;
     }
 
-
+    @Override
+    public String getInfo() {
+        String f = super.getInfo();
+        f += "Start Time : " + String.valueOf(startTime) + " -> Finish Time : " + String.valueOf(finish_time);
+        return f;
+    }
 }
